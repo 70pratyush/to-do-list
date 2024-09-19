@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-do list</title>
-    <link rel="stylesheet" href="styles2.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabarito">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <h1>My To-Do List</h1>
-            <div class="add-task">
-                <input type="text" id="task-input" placeholder="Add a new task">
-                <button onclick="addTask()">Add Task</button>
-            </div>
-
-            <ul id="task-list"></ul>
-        </div>
-    </div>
+    <h1>To-Do List</h1>
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter the task">
+        <button type="submit">Add</button>
+    </form>
+    <ul id="task-list"></ul>
 
 
 
-    <script src="script2.js"></script>
+    
+
+    <script src="todo.js"></script>
 </body>
 </html>
