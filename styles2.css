@@ -1,66 +1,104 @@
 body{
-    background-color:  #f9eeee;
-    font-family: "Gabarito";
-}
-
-.wrapper{
-    display: flex;
-    justify-content: center;
-}
-
-.container{
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5rem;
-    padding: 1.5rem 7rem;
-    border: 1px solid 	#D3D3D3;
-    border-radius: 10px;
-    gap: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
 }
 
 h1{
-    color: black;
+    color: aliceblue;
 }
 
-.add-task{
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+form{
+    margin-bottom: 15px;
 }
 
-button{
-    cursor: pointer;
-    background-color: 	#317fe4;
-    border: #317fe4;
-    border-radius: 3px;
+input{
+    width: 60%;
+    border-radius: 6px;
+    padding: 10px;
+    margin-right: 7px;
+    background-color: #ecebeb;
+}
+
+button[type='submit']{
+    background-color: #28a745;
     color: #fff;
-    padding: 6px 10px;
-    transition: 0.4s ease;
+    font-weight: bold;
+    padding: 10px;
+    width: 10%;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover{
-    background-color: #378dfe;
+button[type='submit']:hover{
+    background-color: #218838;
+    transition-delay: 0.2s;
 }
 
-input[type="text"]{
-    width: 10rem;
-    padding: 4.5px;
-}
-
-
-ul {
+ul{
     list-style-type: none;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0px;
 }
 
-li {
-    min-width: 350px;
+li{
+    background-color: #ecebeb;
+    border-radius: 5px;
+    width: 72%;
+    padding: 10px;
+    margin-bottom: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    padding: 5px 10px;
+    justify-content: space-between;
 }
+
+button.delete{
+    background-color: red;
+    border: red;
+    cursor: pointer;
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add a smooth transition */
+}
+
+button.delete:hover {
+    background-color: #df041a;
+    transition-delay: 0.2s; /* Add a 200ms delay before the hover effect starts */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
