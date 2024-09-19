@@ -1,21 +1,101 @@
-function addTask(){
-    const textInput = document.querySelector("#task-input");
-    const textTask = textInput.value.trim();
+const taskForm = document.querySelector("#task-form");
+const taskInput = document.querySelector("#task-input");
+const taskList = document.querySelector("#task-list");
 
-    if (textTask !== "") {
-        const taskList = document.querySelector("#task-list");
-        const newTask = document.createElement("li");
-        newTask.innerHTML = 
-            `<span>${textTask}</span>
-            <button onclick="deleteTask(this)">Delete</button>`;
+function addTask(e) {
+    e.preventDefault();
 
-        taskList.appendChild(newTask);
-        textInput.value = "";
+    const taskText = taskInput.value;
+    if (taskText === "") {
+        alert("enter the task first");
+        return;
+    }
+
+    const li = document.createElement('li');
+    li.textContent = taskText;
+    taskInput.value = '';
+    taskList.appendChild(li);
+    const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add("delete");
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.style.fontWeight = 'bold';
+    li.appendChild(deleteBtn);   
+}
+
+function deleteTask(e) {
+    if (e.target.classList.contains("delete")) {
+        const li = e.target.parentElement;
+
+        const userConfirm = confirm("Are you sure?")
+        if (userConfirm) {
+            taskList.removeChild(li);
+            console.log("Item removed");
+            
+        }
     }
 }
 
-function deleteTask(button){
-    const taskList = document.querySelector("#task-list");
-    const taskItem = button.parentNode;
-    taskList.removeChild(taskItem);
-}
+taskForm.addEventListener("submit", addTask);
+taskList.addEventListener("click", deleteTask)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
